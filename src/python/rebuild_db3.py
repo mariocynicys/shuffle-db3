@@ -344,7 +344,7 @@ def browse(path, interactive):
 
   if path=="./iPod_Control/Music":
     subdirs=[x[2] for x in files if not x[0]]
-    files=filter(lambda x: x[0], files)
+    files=list(filter(lambda x: x[0], files))
     for dir in subdirs:
       subpath="%s/%s"%(path,dir)
       try:
